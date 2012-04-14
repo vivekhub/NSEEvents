@@ -9,7 +9,7 @@ try:
 	with con:
 		cur = con.cursor() 
 		cur.execute("DROP TABLE IF EXISTS NSEEvents")
-		cur.execute("CREATE TABLE NSEEvents(UniqueKey TEXT UNIQUE, ScriptName TEXT NOT NULL, Description TEXT,EventDate DATE NOT NULL, Uploaded BOOLEAN, PRIMARY KEY (ScriptName, Description, EventDate))")
+		cur.execute("CREATE TABLE NSEEvents(UniqueKey TEXT UNIQUE, ScriptName TEXT NOT NULL, Description TEXT,EventDate DATE NOT NULL,CreateDate DATE DEFAULT CURRENT_DATE,Uploaded BOOLEAN, PRIMARY KEY (ScriptName, Description, EventDate))")
 
 except lite.Error, e:
     print "Error %s:" % e.args[0]

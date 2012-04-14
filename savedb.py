@@ -9,7 +9,7 @@ def savedb(feeditems):
 		con = lite.connect('nseann.db')
 		with con:
 			cur = con.cursor()    
-			cur.executemany('INSERT OR IGNORE INTO NSEEvents VALUES( ?, ?, ?, ?, ?)', feeditems)
+			cur.executemany('INSERT OR IGNORE INTO NSEEvents (UniqueKey, ScriptName, Description, EventDate, Uploaded) VALUES( ?, ?, ?, ?, ?)', feeditems)
 			rval = cur.rowcount
 		con.commit()
 		return rval
