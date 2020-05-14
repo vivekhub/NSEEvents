@@ -1,14 +1,14 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
-import parsefeed
+import parse_corpaction
 import savedb
 
 
 def main():
-  fi = parsefeed.loadparsefeed()
-  print 'Found ' ,  len(fi), 'items'
+  fi = parse_corpaction.loadparsefeed()
+  print('Found ' ,  len(fi), 'items')
   savedcount = savedb.savedb(fi)
-  print 'Added ', savedcount , ' items to the database'
+  print('Added ', savedcount , ' items to the database')
 
   
   

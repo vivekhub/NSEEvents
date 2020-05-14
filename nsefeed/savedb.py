@@ -14,15 +14,15 @@ def savedb(feeditems):
 		con.commit()
 		return rval
 	
-	except lite.Error, e:
-		print "Error %s:" % e.args[0]
+	except lite.Error as e:
+		print("Error %s:" % e.args[0])
 
 
 if __name__ == '__main__':
-	testval = [('2c00978681a672e22f11fb579803f902', u'Blue Dart Express Limited', 
-	  u'ANNUAL GENERAL MEETING AND DIVIDEND RS.2/- PER SHARE',
+	testval = [('2c00978681a672e22f11fb579803f902', 'Blue Dart Express Limited', 
+	  'ANNUAL GENERAL MEETING AND DIVIDEND RS.2/- PER SHARE',
 	datetime.date(2012, 4, 13), False), ('2c00978681a672e22f11fb5798034334',
-	  u'Blue Dart Express Limited ', 
-	  u'ANNUAL GENERAL MEETING AND DIVIDEND RS.2/- PER SHARE', datetime.date(2012, 4, 13), False)]
+	  'Blue Dart Express Limited ', 
+	  'ANNUAL GENERAL MEETING AND DIVIDEND RS.2/- PER SHARE', datetime.date(2012, 4, 13), False)]
 
-	print savedb(testval)
+	print(savedb(testval))

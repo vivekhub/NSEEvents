@@ -70,9 +70,9 @@ def parse_date(string):
 if __name__ == '__main__':
     # Run some simple tests
     for test in ['1pm', '13:30', '5:05pm']:
-        print parse_time(test), test
+        print(parse_time(test), test)
 
     for test in ['2/6/1977', '02/06/77', '1977-06-02', '2 June, 1977', 'Jun 2, 1977', '2 June', 'Jun 2']:
-        print parse_date(test), test
+        print(parse_date(test), test)
 
 

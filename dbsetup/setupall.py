@@ -11,5 +11,5 @@ try:
 		cur.execute("DROP TABLE IF EXISTS NSEEvents")
 		cur.execute("CREATE TABLE NSEEvents(UniqueKey TEXT UNIQUE, ScriptName TEXT NOT NULL, Description TEXT,EventDate DATE NOT NULL,CreateDate DATE DEFAULT CURRENT_DATE,Uploaded BOOLEAN, PRIMARY KEY (ScriptName, Description, EventDate))")
 
-except lite.Error, e:
-    print "Error %s:" % e.args[0]
+except lite.Error as e:
+    print("Error %s:" % e.args[0])

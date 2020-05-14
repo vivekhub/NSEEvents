@@ -7,7 +7,7 @@ thingsaregood = True
 d=feedparser.parse('http://feeds.feedburner.com/nseindia/ca')
 
 if 'entries' not in d:
-    print 'expecting <entries> in the feed that we didnt find it.'
+    print('expecting <entries> in the feed that we didnt find it.')
     thingsaregood = False
 
 items = 0
@@ -25,13 +25,13 @@ for item in d['entries']:
 
 if updatedfound != items:
     thingsaregood = False
-    print 'Out of :' + str(items) + ' items didnt find <updated> field in :' + str(items - updatedfound)
+    print('Out of :' + str(items) + ' items didnt find <updated> field in :' + str(items - updatedfound))
 
 if linkfound != items:
     thingsaregood = False
-    print 'Out of :' + str(items) + ' items didnt find <updated> field in :' + str(items - linkfound)
+    print('Out of :' + str(items) + ' items didnt find <updated> field in :' + str(items - linkfound))
 
 if thingsaregood == False:
-    print 'Our assumptions are not valid anymore.  something is broken'
+    print('Our assumptions are not valid anymore.  something is broken')
 else:
-    print 'Our assumption is still good'
+    print('Our assumption is still good')
