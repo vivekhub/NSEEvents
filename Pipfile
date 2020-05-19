@@ -10,3 +10,7 @@ feedparser = "*"
 
 [requires]
 python_version = "3.7"
+
+[scripts]
+test="${HOME}/projects/NSEEvents/nsefeed/main.py"
+createdb="${HOME}/projects/NSEEvents/dbsetup/setupall.py"

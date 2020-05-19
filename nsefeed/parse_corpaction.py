@@ -18,8 +18,17 @@ def loadparsefeed():
     return feeditems
 
 
+def parseNumber(item):
+    def isfloat(x):
+        return x.isdigit() or x == '.'
+
+    try:
+        return float("".join(filter(isfloat, item)))
+    except:
+        return 0.0
+
+
 def parseNSEitem(item):
-    pprint(item)
     m = hashlib.md5()
     timeslot = None
 
@@ -35,7 +44,7 @@ def parseNSEitem(item):
     summaryitems = item['summary'].split('<div')
 
     return (myguid, titleitems[0], summaryitems[0], pdt.parse_date(
-        titleitems[1]), False)
+        titleitems[1]), parseNumber(summaryitems[0]), False)
 
 
 if __name__ == '__main__':
