@@ -1,7 +1,10 @@
 #!/usr/bin/env python
 
-import feedparser
+# Standard Library
 import pprint
+
+# Project specific libraries
+import feedparser
 
 thingsaregood = True
 d=feedparser.parse('http://feeds.feedburner.com/nseindia/ca')

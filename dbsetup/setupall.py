@@ -1,7 +1,8 @@
 #!/usr/bin/python
 
-import sqlite3 as lite
+# Standard Library
 import sys
+import sqlite3 as lite
 
 try:
 	con = lite.connect('nseann.db')

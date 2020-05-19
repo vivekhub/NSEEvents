@@ -1,12 +1,14 @@
 #!/usr/bin/python
 
-import feedparser
-import hashlib
-import parse_datetime as pdt
-from pprint import pprint
-
-import sqlite3 as lite
+# Standard Library
 import sys
+import hashlib
+import sqlite3 as lite
+
+# Project specific libraries
+import feedparser
+
+import common.parse_datetime as pdt
 
 
 def loadparsefeed():
@@ -30,7 +32,6 @@ def parseNumber(item):
 
 def parseNSEitem(item):
     m = hashlib.md5()
-    timeslot = None
 
     timeslot = item.get('published')
 

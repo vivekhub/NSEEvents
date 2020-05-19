@@ -17,7 +17,9 @@
 
 __version__ = '0.1'
 
-import time, datetime
+# Standard Library
+import time
+import datetime
 
 time_formats = ['%H : %M', '%I : %M %p', '%H', '%I %p']
 
@@ -74,5 +76,3 @@ if __name__ == '__main__':
 
     for test in ['2/6/1977', '02/06/77', '1977-06-02', '2 June, 1977', 'Jun 2, 1977', '2 June', 'Jun 2']:
         print(parse_date(test), test)
-
-
