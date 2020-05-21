@@ -1,4 +1,4 @@
-# NSEEvents
+# NSEEvents - Harvest India's NSE corporate action events from their RSS Feed
 
 NSE Events is a python application that takes the RSS feed from NSE website
 (http://www.nseindia.com) and parses it and creates a calendar of events on
