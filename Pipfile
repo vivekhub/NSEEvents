@@ -13,5 +13,5 @@ feedparser = "*"
 python_version = "3.7"
 
 [scripts]
-test="${HOME}/projects/NSEEvents/nsefeed/main.py"
+test="${HOME}/projects/NSEEvents/corpaction/main.py"
 createdb="${HOME}/projects/NSEEvents/dbsetup/setupall.py"
